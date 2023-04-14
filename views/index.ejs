@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <style>
+      /* Define the animation */
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-40px);
+        }
+        60% {
+          transform: translateY(-20px);
+        }
+      }
+      
+      /* Apply the animation to the h1 element */
+      h1 {
+        animation: bounce 2s ease-in-out infinite;
+      }
+      
+      body {
+        background-color: #F5E6CA; /* Set a nice background color */
+      }
+      
+      h1 {
+        color: #5A5C5A; /* Set a color for the title text */
+        text-shadow: 2px 2px 0 #FFFFFF; /* Add a subtle white text shadow to make the text stand out */
+      }
+      
+      h2 {
+        color: #707070; /* Set a color for the subtitle text */
+      }
+      
+      p {
+        color: #454545; /* Set a color for the body text */
+      }
+      
+      a {
+        color: #1E90FF; /* Set a color for the links */
+      }
+      
+      /* Center everything in the middle of the page */
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 30vh;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-white shadow">
+      <div class="container mx-auto px-6 py-4">
+        <h1 class="text-3xl font-bold">Welcome to <span class="inline-block">Your First Express Js App</span></h1>
+      </div>
+    </header>
+    <div class="container mx-auto mt-6">
+      <h2 class="text-lg font-bold">This is a test</h2>
+    
+      <p class="mt-4">Application using Express Js </p>
+    
+      <div class="flex mt-6">
+        <a href="about.html" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">About us</a>
+        <span class="mx-2">|</span>
+        <a href="contact.html" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">Contact us</a>
+      </div>
+    
+      <br><br>
+    
+      <form action="/dynamic/save" method="post" class="mt-8">
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-md">
+          Test POST
+        </button>
+        <br><br>
+        <a href="/dynamic/details?id=2" class="text-blue-500 font-bold mt-4 inline-block hover:text-blue-700 transition duration-300 transform hover:-translate-y-1 block text-center">Exemple chaine de requete</a>
+
+      </form>
+      
+      
+    </div>
+    
+    </div>
+  </body>
+</html>
